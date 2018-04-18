@@ -1,0 +1,9 @@
+/*
+pacaur 
+yaourt 
+packer 
+spotify 
+terminator 
+guake 
+
+*/
