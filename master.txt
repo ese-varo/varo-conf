@@ -1,5 +1,11 @@
 /////////////////////////// VIM COMMANDS /////////////////////////
 Vim Cheat Sheet
+
+Change default location of vimrc
+
+    export VIMINIT='source $MYVIMRC'
+    export MYVIMRC='~/.vim/vimrc'  #or any other location you want
+
 Global
 
     :help keyword - open help for keyword
@@ -220,7 +226,12 @@ Searching
     take you to all the places where the word/variable is used
     in the file
 
-    
+Ruby on Rails 
+
+    = on a single line or a visual block vim will indent 
+         Rail files automatically 
+
+
 =================================================================		
 
 //////////////////////// TERMINATOR /////////////////////////////
