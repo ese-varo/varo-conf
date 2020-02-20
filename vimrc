@@ -1,39 +1,47 @@
-" 
-" New config settings 
-
-set number
-syntax on 
-filetype plugin indent on 
-filetype on 
-filetype indent on 
-set expandtab tabstop=2 shiftwidth=2
-
+" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-"Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-"Plugin 'L9'
-" Git plugin not hosted on GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-"Plugin 'user/L9', {'name': 'newL9'}
-
 " My plugins
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
+Plugin 'scrooloose/nerdtree'
+"Plugin 'tpope/vim-rake'
+"Plugin 'tpope/vim-bundler'
+"Plugin 'Xuyuanp/nerdtree-git-plugin'
+"Plugin 'tpope/vim-projectionist'
+"Plugin 'jlanzarotta/bufexplorer'
+"Plugin 'scrooloose/nerdcommenter'
+"Plugin 'mattn/emmet-vim'
 
 " All of your Plugins must be added before the following line
+" Brief help
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
 call vundle#end()            " required
+filetype on
+filetype indent on
+filetype plugin indent on    " required
 
-" Pending settings
+" see :h vundle for more details or wiki for FAQ
+" reasign <leader> to ' ' blank space key
+let mapleader = ' '
+
+" NERDTree config
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"autocmd BufWinEnter * NERDTreeFind
+
+map <F2> :NERDTreeToggle<CR>
+map <leader>r :NERDTreeFind<cr>      " this is the key to jump to the nerdtree
+set expandtab tabstop=2 shiftwidth=2
+" Put your non-Plugin stuff after this line
+
+set number 
+syntax on
+
