@@ -1,10 +1,9 @@
 /////////////////////////// VIM COMMANDS /////////////////////////
 Vim Cheat Sheet
 
-Change default location of vimrc
+Change default location of vimrc using file linking
 
-    export VIMINIT='source $MYVIMRC'
-    export MYVIMRC='~/.vim/vimrc'  #or any other location you want
+    ln -s /nome/user/vimrc-custom-path ~/.vimrc
 
 Global
 
