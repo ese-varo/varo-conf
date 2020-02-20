@@ -180,6 +180,47 @@ Working with multiple files
     Ctrl + wl - move cursor to the right window (vertical split)
     Ctrl + wj - move cursor to the window below (horizontal split)
     Ctrl + wk - move cursor to the window above (horizontal split)
+
+Resizing split windows 
+
+    For a split window:
+    Resize height of the current window by a single row.
+    Ctrl-w +  
+    Ctrl-w -  
+    
+    For a vsplit window:
+    To resize width of the current window by a single column.
+    Ctrl-w > 
+    Ctrl-w < 
+
+Working with tabs
+    From normal mode 
+    gt next tab
+    gT prior tab
+    #gt numbered tab where # is the tab number
+    Ctrl-PgDn go to next tab 
+    Ctrl-PgUp go to previous tab 
+
+Save a file you edited without the required permissions 
+    :w !sudo tee %
+    :sh - run a command from within the editor 
+    
+Preserve indentation during copy/paste
+    Add the line: "set pastetoggle=<F2>" to your .vimrc file
+    and press F2 in insert mode just before pasting the code. This
+    preserve the original indentation.
+
+Keyword completion
+    Ctrl-n is used to insert the next matching word 
+    Ctrl-p gives you a list of previous matching words
+
+Searching 
+    Move the cursor over the word/variable you are trying to search
+    and press Esc, then press Shift-* repeatedly and the editor will
+    take you to all the places where the word/variable is used
+    in the file
+
+    
 =================================================================		
 
 //////////////////////// TERMINATOR /////////////////////////////
@@ -194,23 +235,8 @@ ctl + shift + t - create tabs
 ctl + + / ctl + - - resize text 
 =================================================================
 
-/////////////////////////clipit commands //////////////////////// 
-alt + ctl + h - history 
-
-//zsh commands 
-ctl + arrow - moves left or right one word 
-ctl + w - deletes previeus word in command line 
-ctl + u - deletes the entire line 
-=================================================================		
-
-////////////////////// PROGRAMS TO ADD //////////////////////////
+////////////////////// PROGRAMS /////////////////////////////////
 /*
-pacaur 
-yaourt 
-packer 
-spotify 
-terminator 
-guake 
 
 */
 =================================================================		
