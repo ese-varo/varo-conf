@@ -191,13 +191,13 @@ Resizing split windows
 
     For a split window:
     Resize height of the current window by a single row.
-    Ctrl-w +  
-    Ctrl-w -  
+    space-j rezise the with 3 less rows
+    space-k rezise the with 3 more rows
     
     For a vsplit window:
     To resize width of the current window by a single column.
-    Ctrl-w > 
-    Ctrl-w < 
+    space-h rezise the with 3 less columns
+    space-l rezise the with 3 more columns
 
 Working with tabs
 
@@ -238,6 +238,19 @@ Ruby on Rails
 
 NERDTree
 
+    <F2> Toogle between NERDTree and windows
+    spacekey-r jump to the NERDTree 
+
+FZF vim 
+
+    Ctrl-z opens a search window at the bottom 
+
+    Ctrl-t opens a file in a new tab
+    Ctrl-x opens a file in a new split window
+    Ctrl-v opens a file in a new vertical split window
+    
+    Ctrl-j move down trough the files list
+    Ctrl-k move up trough the files list
 
 =================================================================		
 
