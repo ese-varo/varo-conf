@@ -1,6 +1,7 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+set encoding=UTF-8
 
 " source ~/.vimrc.before if it exists.
 if filereadable(expand("~/.vimrc.before"))
@@ -33,8 +34,10 @@ let g:rehash256 = 1
 
 " highlight 81 column and onward
 " let &colorcolumn=join(range(81,999),",")
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
+hi ColorColumn ctermbg=237
 let &colorcolumn="80,".join(range(120,999),",")
+autocmd FileType gitcommit set textwidth=72
+autocmd FileType gitcommit set colorcolumn=73
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
