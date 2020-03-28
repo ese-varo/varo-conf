@@ -13,7 +13,7 @@ endif
 execute pathogen#infect()
 set number relativenumber       "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
-set history=1000                "Store lots of :cmdline history
+set history=10000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
 set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
@@ -183,8 +183,20 @@ map <leader>r :NERDTreeFind<cr>      " this is the key to jump to the nerdtree
 
 " vim airline 
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 "let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_theme='minimalist' "papercolor powerlineish fruit_punch
 
+" Automatically comb your CSS on save
+autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
+
+" Plugins to install 
+" First install pathogen plugin manager, then visit vimawesome and install next plugins
+" - nerdtree
+" - fzf
+" - vim-airline
+" - vim-airline-themes
+" - vim-surround
+" - vim-commentary
+" - vim-devicons
