@@ -1,0 +1,10 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+[core]
+	editor = vim
+[user]
+	email = varoboss.ap@gmail.com
+	name = Alvaro Padilla

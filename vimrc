@@ -1,13 +1,3 @@
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
-set encoding=UTF-8
-
-" source ~/.vimrc.before if it exists.
-if filereadable(expand("~/.vimrc.before"))
-source ~/.vimrc.before
-endif
-
 " ================ General Config ====================
 
 execute pathogen#infect()
@@ -19,6 +9,8 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
+" set spelllang=en_us,es
+" set spell
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -178,7 +170,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-map <F4> :NERDTreeToggle<CR>
+map <F2> :NERDTreeToggle<CR>
 map <leader>r :NERDTreeFind<cr>      " this is the key to jump to the nerdtree
 
 " vim airline 
@@ -191,6 +183,8 @@ let g:airline_theme='minimalist' "papercolor powerlineish fruit_punch
 " Automatically comb your CSS on save
 autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
 
+" ^[ is an alternative shorcut for escape key
+
 " Plugins to install 
 " First install pathogen plugin manager, then visit vimawesome and install next plugins
 " - nerdtree
@@ -200,3 +194,4 @@ autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
 " - vim-surround
 " - vim-commentary
 " - vim-devicons
+" - vim-endwise
