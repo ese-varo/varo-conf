@@ -1,3 +1,4 @@
+export TERM="xterm-256color"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -130,6 +131,13 @@ fi
 
 #rails 
 alias r=rails
+
+# TERM color
+alias tmux="TERM=screen-256color-bce tmux"
+
+# trackpoint enable and disable
+alias enable-tp="xinput set-prop 'TPPS/2 IBM TrackPoint' 'Device Enabled' 1"
+alias disable-tp="xinput set-prop 'TPPS/2 IBM TrackPoint' 'Device Enabled' 0"
 
 #list
 alias ls='ls --color=auto'
