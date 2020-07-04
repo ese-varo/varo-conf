@@ -12,10 +12,31 @@ set autoread                    "Reload files changed outside vim
 " set spelllang=en_us,es
 " set spell
 
-set hidden
+" color novum
+" color ambient
+color molokai
+" color onehalfdark
+" color atom-dark
+
+
+" ============ colorscheme plugins configuration ================
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+syntax enable
 
 "turn on syntax highlighting
 syntax on
+
+" Theme
+" colorscheme OceanicNext
+
+let g:NERDTreeWinPos = "right"
+autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
+:set cpoptions+=$ " puts a $ marker for the end of words/lines in cw/c$ commands
+
+set hidden
 
 " highlight 81 column and onward
 " let &colorcolumn=join(range(81,999),",")
@@ -89,6 +110,10 @@ set list listchars=tab:\ \ ,trail:·
 
 set linebreak    "Wrap lines at convenient points
 
+" ================ plugin closetag ========================
+
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*html.erb'
+
 " ================ Custom Settings ========================
 
 " Window pane resizing
@@ -118,6 +143,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#formatter = 'default'
 "let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_theme='minimalist' "papercolor powerlineish fruit_punch
+" let g:airline_theme='tender' "papercolor powerlineish fruit_punch
 
 " Automatically comb your CSS on save
 autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
