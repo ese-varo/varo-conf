@@ -33,8 +33,8 @@ syntax on
 " colorscheme OceanicNext
 
 let g:NERDTreeWinPos = "right"
-autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
-:set cpoptions+=$ " puts a $ marker for the end of words/lines in cw/c$ commands
+" autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
+" :set cpoptions+=$ " puts a $ marker for the end of words/lines in cw/c$ commands
 
 set hidden
 
@@ -152,11 +152,18 @@ autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
 
 " Plugins to install 
 " First install pathogen plugin manager, then visit vimawesome and install next plugins
-" - nerdtree
-" - fzf
-" - vim-airline
-" - vim-airline-themes
-" - vim-surround
-" - vim-commentary
-" - vim-devicons
-" - vim-endwise
+" auto-pairs
+" fzf
+" nerdtree
+" nord-vim
+" oceanic-next
+" palenight.vim
+" tender
+" vim-airline
+" vim-airline-themes
+" vim-closetag
+" vim-commentary
+" vim-devicons
+" vim-endwise
+" vim-ruby
+" vim-surround
