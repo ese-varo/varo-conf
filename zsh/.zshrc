@@ -129,6 +129,9 @@ if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
 
+#set vim to disable ctrl-s
+alias vim="stty -ixon && vim"
+
 #rails 
 alias r=rails
 
