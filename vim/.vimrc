@@ -14,7 +14,7 @@ set autoread                    "Reload files changed outside vim
 
 " color novum
 " color ambient
-color molokai
+" color molokai
 " color onehalfdark
 " color atom-dark
 
@@ -30,11 +30,7 @@ syntax enable
 syntax on
 
 " Theme
-" colorscheme OceanicNext
-
-let g:NERDTreeWinPos = "right"
-" autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
-" :set cpoptions+=$ " puts a $ marker for the end of words/lines in cw/c$ commands
+colorscheme OceanicNext
 
 set hidden
 
@@ -134,7 +130,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-map <F2> :NERDTreeToggle<CR>
+map <C-N> :NERDTreeToggle<CR>
 map <leader>r :NERDTreeFind<cr>      " this is the key to jump to the nerdtree
 
 " vim airline 
