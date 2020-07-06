@@ -121,6 +121,9 @@ nnoremap <leader>l :exe "vertical resize +3"<CR>
 nnoremap <leader>j :exe "resize -3"<CR>
 nnoremap <leader>k :exe "resize +3"<CR>
 
+" enable indent guides by default
+let g:indent_guides_enable_on_vim_startup = 1
+
 " remap call to fzf file search
 nnoremap <silent> <C-p> :FZF<CR>
 
@@ -158,8 +161,9 @@ autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
 " vim-airline
 " vim-airline-themes
 " vim-closetag
-" vim-commentary
+" commentary.vim
 " vim-devicons
-" vim-endwise
+" endwise.vim
 " vim-ruby
 " vim-surround
+" vim-indent-guides
