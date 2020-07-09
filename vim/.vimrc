@@ -144,6 +144,9 @@ let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_theme='minimalist' "papercolor powerlineish fruit_punch
 " let g:airline_theme='tender' "papercolor powerlineish fruit_punch
 
+" vim-css-color plugin conf
+let g:cssColorVimDoNotMessMyUpdatetime = 1
+
 " Automatically comb your CSS on save
 autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
 
@@ -167,3 +170,4 @@ autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
 " vim-ruby
 " vim-surround
 " vim-indent-guides
+" vim-css-color
