@@ -171,3 +171,12 @@ autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
 " vim-surround
 " vim-indent-guides
 " vim-css-color
+" yajs
+" html5
+" yats
+" pangloss/vim-javascript'
+" leafgarland/typescript-vim'
+" peitalin/vim-jsx-typescript'
+" styled-components/vim-styled-components', { 'branch': 'main' }
+" jparise/vim-graphql'
+
