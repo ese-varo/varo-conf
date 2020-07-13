@@ -59,6 +59,8 @@ set $right l
 #exec --no-startup-id xrandr --output DVI-1 --right-of DVI-0 --auto
 #exec --no-startup-id xrandr --output DVI-D-1 --right-of DVI-I-1 --auto
 #exec --no-startup-id xrandr --output HDMI2 --right-of HDMI1 --auto
+
+# enable two monitors, set the second one above the main one
 exec --no-startup-id xrandr --output HDMI2 --above eDP1 --auto --rotate normal
 
 # my current setup
