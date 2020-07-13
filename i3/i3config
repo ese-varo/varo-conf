@@ -308,8 +308,8 @@ mode "resize" {
 # is used in the bar {} block below.
 # choose your font
 # font pango:Noto Mono Regular 13
-# font pango:Ubuntu Mono Regular 11
-font xft:URWGothic-Book 0
+font pango:Ubuntu Mono Regular 8
+# font xft:URWGothic-Book 8
 # font pango:mononoki Mono Regular 12
 
 #####################################################################################################################
@@ -869,22 +869,22 @@ bar {
         # DarkGrey background with white text - not focus grey background - black text
         # Windows decoration colors
         # class                 border  backgr. text    indicator
-        client.placeholder      #242424 #242424 #242424
-        client.background       #242424 #242424 #242424
+        # client.placeholder      #242424 #242424 #242424
+        # client.background       #242424 #242424 #242424
         # client.focused          #6790EB #6790EB #e5e5e5 #6790EB
-        client.focused          #00A9A5 #00A9A5 #e5e5e5 #00A9A5
-        client.unfocused        #222222 #222222 #aaaaaa #222222
-        client.focused_inactive #222222 #222222 #a9a9a9 #222222
-        client.urgent           #d42121 #d42121 #f7f7f7 #d42121
+        # client.focused          #00A9A5 #00A9A5 #e5e5e5 #00A9A5
+        # client.unfocused        #222222 #222222 #aaaaaa #222222
+        # client.focused_inactive #222222 #222222 #a9a9a9 #222222
+        # client.urgent           #d42121 #d42121 #f7f7f7 #d42121
 
         #Theme name : varo
         # class                   border  backgr. text    indic.   child_border
-        # client.focused          #556064 #556064 #80FFF9 #FDF6E3
-        # client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-        # client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-        # client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-        # client.placeholder      #000000 #0c0c0c #ffffff #000000 
-        # client.background       #2B2C2B
+        client.focused          #556064 #556064 #80FFF9 #FDF6E3
+        client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
+        client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
+        client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+        client.placeholder      #000000 #0c0c0c #ffffff #000000 
+        client.background       #2B2C2B
 
       ##STOP THEMING
 
