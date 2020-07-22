@@ -80,16 +80,16 @@ exec --no-startup-id xrandr --output HDMI2 --above eDP1 --auto --rotate normal
 set $firstMonitor eDP1
 set $secondMonitor HDMI2
 
-workspace 1 output $secondMonitor
-workspace 2 output $secondMonitor
-workspace 3 output $secondMonitor
-workspace 4 output $secondMonitor
-workspace 5 output $secondMonitor
-workspace 6 output $firstMonitor
-workspace 7 output $firstMonitor
-workspace 8 output $firstMonitor
-workspace 9 output $firstMonitor
-workspace 10 output $firstMonitor
+workspace 1 output $firstMonitor
+workspace 2 output $firstMonitor
+workspace 3 output $firstMonitor
+workspace 4 output $firstMonitor
+workspace 5 output $firstMonitor
+workspace 6 output $secondMonitor
+workspace 7 output $secondMonitor
+workspace 8 output $secondMonitor
+workspace 9 output $secondMonitor
+workspace 10 output $secondMonitor
 
 # switch to workspace
 bindsym $mod+1 workspace 1
