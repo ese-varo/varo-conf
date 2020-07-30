@@ -519,7 +519,8 @@ bindsym --release $mod+Escape exec xkill
 #workspace 1 related
 bindsym $mod+F1 exec --no-startup-id exo-open --launch webbrowser;focus
 #qwerty/azerty conflict with w
-bindsym $mod+w exec --no-startup-id exo-open --launch webbrowser;focus
+# bindsym $mod+w exec --no-startup-id exo-open --launch webbrowser;focus
+bindsym $mod+w exec --no-startup-id firefox-developer-edition;focus
 bindsym control+mod1+f exec --no-startup-id firefox;focus
 bindsym control+mod1+v exec --no-startup-id vivaldi-stable;focus
 bindsym control+mod1+g exec --no-startup-id chromium;focus
@@ -729,8 +730,8 @@ popup_during_fullscreen smart
 
 # for_window [class="^.*"] border pixel 1
 for_window [class="^.*"] border none
-gaps inner 0
-gaps outer 0
+gaps inner 5
+gaps outer 5
 #smart_gaps on
 #smart_borders on
 
