@@ -1,0 +1,31 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "typescript.tsx"
+  ],
+  "coc.preferences.diagnostic.virtualText": true,
+  "solargraph.diagnostics": true,
+  "solargraph.formatting": true,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "typescript.tsx"
+  ],
+  "eslint.options": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "configFile": ""
+  },
+  "eslint.autoFixOnSave": false,
+  "eslint.packageManager": "yarn",
+  "tsserver.formatOnType": true,
+  "prettier.disableSuccessMessage": true
+}
