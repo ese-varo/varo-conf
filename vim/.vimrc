@@ -87,7 +87,6 @@ set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
 
-"
 " ================ Scrolling ========================
 
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
@@ -147,7 +146,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 map <C-N> :NERDTreeToggle<CR>
-map <leader>r :NERDTreeFind<cr>      " this is the key to jump to the nerdtree
+map <leader>t :NERDTreeFind<cr>      " this is the key to jump to the nerdtree
 
 " vim airline 
 let g:airline_powerline_fonts = 1
@@ -163,6 +162,46 @@ let g:cssColorVimDoNotMessMyUpdatetime = 1
 
 " Automatically comb your CSS on save
 autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
+
+" Highlighting for large files
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
+" coc configuration
+let g:coc_global_extensions = [
+  \ 'coc-solargraph',
+  \ 'coc-tsserver',
+  \ 'coc-json',
+  \ 'coc-prettier',
+  \ 'coc-eslint',
+  \ 'coc-css',
+  \ 'coc-html',
+  \ 'coc-emmet'
+  \]
+
+function! ShowDocIfNoDiagnostic(timer_id)
+  if (coc#util#has_float() == 0)
+    silent call CocActionAsync('doHover')
+  endif
+endfunction
+
+function! s:show_hover_doc()
+  call timer_start(500, 'ShowDocIfNoDiagnostic')
+endfunction
+
+autocmd CursorHoldI * :call <SID>show_hover_doc()
+autocmd CursorHold * :call <SID>show_hover_doc()
+
+nmap <leader>rn <Plug>(coc-rename)
+
+nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>s :<C-u>CocList -I symbols<cr>
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gr <Plug>(coc-references)
+
+nmap <leader>do <Plug>(coc-codeaction)
 
 " ^[ is an alternative shorcut for escape key
 
@@ -185,12 +224,12 @@ autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
 " vim-surround
 " vim-indent-guides (colors) / vim-indendguides (chars)
 " vim-css-color
-" yajs
 " html5
-" yats
 " pangloss/vim-javascript'
 " leafgarland/typescript-vim'
 " peitalin/vim-jsx-typescript'
 " styled-components/vim-styled-components', { 'branch': 'main' }
 " jparise/vim-graphql'
+" coc.nvim
+" rails.vim
 
