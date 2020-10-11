@@ -236,4 +236,6 @@ nmap <leader>do <Plug>(coc-codeaction)
 " jparise/vim-graphql'
 " coc.nvim
 " rails.vim
+" vim-css3-syntax
+" scss-syntax
 
