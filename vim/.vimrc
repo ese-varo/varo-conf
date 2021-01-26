@@ -168,44 +168,44 @@ let g:cssColorVimDoNotMessMyUpdatetime = 1
 autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
 
 " Highlighting for large files
-autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
-autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+" autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+" autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 " coc configuration
-let g:coc_global_extensions = [
-  \ 'coc-solargraph',
-  \ 'coc-tsserver',
-  \ 'coc-json',
-  \ 'coc-prettier',
-  \ 'coc-eslint',
-  \ 'coc-css',
-  \ 'coc-html',
-  \ 'coc-emmet'
-  \]
+" let g:coc_global_extensions = [
+"   \ 'coc-solargraph',
+"   \ 'coc-tsserver',
+"   \ 'coc-json',
+"   \ 'coc-prettier',
+"   \ 'coc-eslint',
+"   \ 'coc-css',
+"   \ 'coc-html',
+"   \ 'coc-emmet'
+"   \]
 
-function! ShowDocIfNoDiagnostic(timer_id)
-  if (coc#util#has_float() == 0)
-    silent call CocActionAsync('doHover')
-  endif
-endfunction
+" function! ShowDocIfNoDiagnostic(timer_id)
+"   if (coc#util#has_float() == 0)
+"     silent call CocActionAsync('doHover')
+"   endif
+" endfunction
 
-function! s:show_hover_doc()
-  call timer_start(500, 'ShowDocIfNoDiagnostic')
-endfunction
+" function! s:show_hover_doc()
+"   call timer_start(500, 'ShowDocIfNoDiagnostic')
+" endfunction
 
-autocmd CursorHoldI * :call <SID>show_hover_doc()
-autocmd CursorHold * :call <SID>show_hover_doc()
+" autocmd CursorHoldI * :call <SID>show_hover_doc()
+" autocmd CursorHold * :call <SID>show_hover_doc()
 
-nmap <leader>rn <Plug>(coc-rename)
+" nmap <leader>rn <Plug>(coc-rename)
 
-nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
-nnoremap <silent> <space>s :<C-u>CocList -I symbols<cr>
+" nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
+" nnoremap <silent> <space>s :<C-u>CocList -I symbols<cr>
 
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gr <Plug>(coc-references)
+" nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gy <Plug>(coc-type-definition)
+" nmap <silent> gr <Plug>(coc-references)
 
-nmap <leader>do <Plug>(coc-codeaction)
+" nmap <leader>do <Plug>(coc-codeaction)
 
 " ^[ is an alternative shorcut for escape key
 
