@@ -27,6 +27,7 @@ ZSH_THEME="kennethreitz"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   archlinux
+  asdf
   git
   bundler
   rake
@@ -153,7 +154,7 @@ ex ()
 
 [[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
 
-neofetch
+# neofetch
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -178,7 +179,7 @@ export PATH="/opt/firefox-dev/firefox:$PATH"
 # Hide username@hostname when logged in local machine 
 prompt_context(){}
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # rustup to path
 #export PATH="$HOME/.cargo/env:$PATH"
