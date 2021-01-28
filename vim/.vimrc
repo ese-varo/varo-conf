@@ -68,7 +68,7 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " ================ Enable tab for emmet =============
 
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+" imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " ================ Turn Off Swap Files ==============
 
