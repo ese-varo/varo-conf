@@ -85,6 +85,7 @@ alias vim="stty -ixon && vim"
 
 #rails 
 alias r=rails
+alias br=bin/rails
 
 # TERM color
 alias tmux="TERM=screen-256color-bce tmux"
