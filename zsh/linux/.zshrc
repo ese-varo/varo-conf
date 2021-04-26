@@ -83,6 +83,14 @@ fi
 #set vim to disable ctrl-s
 alias vim="stty -ixon && vim"
 
+# switch to the Nvidia GPU
+alias use-nvidia="optimus-manager --switch nvidia"
+# switch to the integrated GPU and power the Nvidia GPU off
+alias use-integrated="optimus-manager --switch integrated"
+# switch to the iGPU but leave the Nvidia GPU available for on-demand offloading,
+# similar to how Optimus works on Windows
+alias use-hybrid="optimus-manager --switch hybrid"
+
 #rails 
 alias r=rails
 alias br=bin/rails
@@ -91,8 +99,8 @@ alias br=bin/rails
 alias tmux="TERM=screen-256color-bce tmux"
 
 # trackpoint enable and disable
-alias enable-tp="xinput set-prop 'TPPS/2 IBM TrackPoint' 'Device Enabled' 1"
-alias disable-tp="xinput set-prop 'TPPS/2 IBM TrackPoint' 'Device Enabled' 0"
+# alias enable-tp="xinput set-prop 'TPPS/2 IBM TrackPoint' 'Device Enabled' 1"
+# alias disable-tp="xinput set-prop 'TPPS/2 IBM TrackPoint' 'Device Enabled' 0"
 
 #list
 #alias ls='ls --color=auto'
