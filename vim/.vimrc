@@ -40,10 +40,20 @@ endif
 syntax enable
 "turn on syntax highlighting
 syntax on
-let g:oceanic_next_terminal_bold = 1
-let g:oceanic_next_terminal_italic = 1
-" Theme
-colorscheme OceanicNext
+" OceanicNext Theme
+" let g:oceanic_next_terminal_bold = 1
+" let g:oceanic_next_terminal_italic = 1
+" colorscheme OceanicNext
+
+" palenight theme
+" set background=dark
+" colorscheme palenight
+
+" tender theme
+colorscheme tender
+
+" nord theme
+" colorscheme nord
 
 set hidden
 
@@ -167,6 +177,12 @@ let g:cssColorVimDoNotMessMyUpdatetime = 1
 " Automatically comb your CSS on save
 autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
 
+" better-css-syntx-for-vim
+augroup VimCSS3Syntax
+  autocmd!
+
+  autocmd FileType css setlocal iskeyword+=-
+augroup END
 " Highlighting for large files
 " autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 " autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
@@ -225,17 +241,11 @@ autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
 " vim-devicons
 " endwise.vim
 " vim-ruby
-" vim-surround
-" vim-indent-guides (colors) / vim-indendguides (chars)
+" surround
+" vim-indendguides (chars)
 " vim-css-color
 " html5
-" pangloss/vim-javascript'
-" leafgarland/typescript-vim'
-" peitalin/vim-jsx-typescript'
-" styled-components/vim-styled-components', { 'branch': 'main' }
-" jparise/vim-graphql'
-" coc.nvim
 " rails.vim
-" vim-css3-syntax
+" Better CSS Syntax for Vim
 " scss-syntax
 
