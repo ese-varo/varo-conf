@@ -76,6 +76,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-obsession'
   Plug 'junegunn/goyo.vim'
   Plug 'nelstrom/vim-visual-star-search'
+  Plug 'yggdroot/indentline'
 
   " Ruby
   Plug 'tpope/vim-endwise'
