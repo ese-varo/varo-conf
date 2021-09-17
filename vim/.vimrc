@@ -6,9 +6,16 @@ set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=10000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
 set showmode                    "Show current mode down the bottom
+set cursorline
+set ruler
+set showmatch
+set numberwidth=1
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
+set encoding=UTF-8
+
+
 
 " Triger `autoread` when files changes on disk
 " https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim/383044#383044
@@ -21,7 +28,6 @@ autocmd FocusGained,BufEnter,CursorHold,CursorHoldI *
 autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
-set encoding=UTF-8
 " set spelllang=en_us,es
 " set spell
 
