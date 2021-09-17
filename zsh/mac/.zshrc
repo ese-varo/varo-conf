@@ -133,3 +133,8 @@ eval "$(rbenv init -)"
 
 # disable homebrew auto update every time it is executed
 export HOMEBREW_NO_AUTO_UPDATE=1
+
+if type rg &> /dev/null; then
+  export FZF_DEFAULT_COMMAND='rg --files'
+  export FZF_DEFAULT_OPTS='-m --height 50% --border'
+fi
