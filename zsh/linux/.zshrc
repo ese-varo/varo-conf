@@ -207,3 +207,9 @@ export PATH=$PATH:/home/varo/.yarn/bin/
 
 # Add Homebrew's executable directory to the front of the PATH
 export PATH=/usr/local/bin:$PATH
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if type rg &> /dev/null; then
+  export FZF_DEFAULT_COMMAND='rg --files'
+  export FZF_DEFAULT_OPTS='-m --height 50% --border'
+fi
