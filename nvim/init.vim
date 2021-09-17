@@ -136,6 +136,8 @@ let g:NERDTreeStatusline = ''
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Toggle
 nnoremap <silent> <C-b> :NERDTreeToggle<CR>
+" jump to file in nerdtree
+map <leader>t :NERDTreeFind<CR>
 
 " FZF
 nnoremap <C-p> :FZF<CR>
