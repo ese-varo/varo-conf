@@ -5,7 +5,15 @@ set cursorline
 set showmode                        "Show current mode down the bottom
 set autoread                        "Reload files changed outside vim
 set encoding=UTF-8
-let mapleader=" "
+
+" ================ Indentation ======================
+set autoindent
+set smartindent
+set smarttab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
 
 " ================ Search ===========================
 set incsearch       " Find the next match as we type the search
@@ -23,20 +31,11 @@ set scrolloff=2         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
-" ================ Indentation ======================
-set autoindent
-set smartindent
-set smarttab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
-set expandtab
-
-filetype plugin on
-filetype indent on
-
 set list listchars=tab:\ \ ,trail:· " Display tabs and trailing spaces visually
 set linebreak                       "Wrap lines at convenient points
+
+filetype indent plugin on
+let mapleader=" "
 
 " ================ plugin closetag ========================
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*html.erb'"
@@ -54,9 +53,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'mhartington/oceanic-next'
   Plug 'drewtempelmeyer/palenight.vim'
   Plug 'jacoborus/tender'
-
-  " syntax
-  Plug 'sheerun/vim-polyglot'
+  Plug 'joshdick/onedark.vim'
 
   " File Explorer with Icons
   Plug 'scrooloose/nerdtree'
@@ -108,6 +105,7 @@ syntax enable
 syntax on
 " colorscheme dracula
 " colorscheme tender
+" colorscheme onedark
 " OceanicNext Theme
 let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
