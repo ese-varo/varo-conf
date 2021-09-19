@@ -152,6 +152,9 @@ nnoremap <silent> <Leader>f :Rg<CR>
 " Don't search by filename when looking inside files
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
+" Open a file in fullscreen mode
+nnoremap <C-g> :Goyo<CR>
+
 " open new split panes to right and below
 set splitright
 set splitbelow
