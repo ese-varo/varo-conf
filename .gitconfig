@@ -4,7 +4,7 @@
 	ci = commit
 	st = status
 [core]
-	editor = vim
+	editor = nvim
 [user]
 	email = varoboss.ap@gmail.com
 	name = Alvaro Padilla
