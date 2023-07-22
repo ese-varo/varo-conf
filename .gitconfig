@@ -8,3 +8,5 @@
 [user]
 	email = varoboss.ap@gmail.com
 	name = Alvaro Padilla
+[init]
+	defaultBranch = main
