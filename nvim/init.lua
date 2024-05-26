@@ -246,6 +246,10 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  'tpope/vim-endwise', -- wisely add "end" in ruby, endfunction/endif, etc
+  'vim-ruby/vim-ruby',
+  'chun-yang/auto-pairs', -- insert or delete brackets, parens, quotes in pair
+  'tpope/vim-surround', --quoting/parentehesizing made simple
   'nvim-tree/nvim-web-devicons',
 
   -- NOTE: Plugins can also be added by using a table,
