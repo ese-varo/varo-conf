@@ -197,17 +197,17 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- nvim-tree keybinds
-vim.api.nvim_set_keymap('n', '<C-h>', ':NvimTreeToggle<cr>', { silent = true, noremap = true })
-vim.api.nvim_set_keymap('n', '<C-f>', ':NvimTreeFindFile<cr>', {})
+vim.keymap.set('n', '<C-h>', ':NvimTreeToggle<cr>', { silent = true, noremap = true })
+vim.keymap.set('n', '<C-f>', ':NvimTreeFindFile<cr>', {})
 
 -- mappings to move lines up & down
 -- to move blocks of code it should be selected in visual mode
-vim.api.nvim_set_keymap('n', '<C-j>', ':m .+1<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-k>', ':m .-2<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '<C-j>', '<Esc>:m .+1<CR>==gi', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-k>', '<Esc>:m .-2<CR>==gi', { noremap = true })
-vim.api.nvim_set_keymap('v', '<C-j>', ":m '>+1<CR>gv=gv", { noremap = true })
-vim.api.nvim_set_keymap('v', '<C-k>', ":m '<-2<CR>gv=gv", { noremap = true })
+vim.keymap.set('n', '<C-j>', ':m .+1<CR>', { noremap = true })
+vim.keymap.set('n', '<C-k>', ':m .-2<CR>', { noremap = true, silent = true })
+vim.keymap.set('i', '<C-j>', '<Esc>:m .+1<CR>==gi', { noremap = true })
+vim.keymap.set('i', '<C-k>', '<Esc>:m .-2<CR>==gi', { noremap = true })
+vim.keymap.set('v', '<C-j>', ":m '>+1<CR>gv=gv", { noremap = true })
+vim.keymap.set('v', '<C-k>', ":m '<-2<CR>gv=gv", { noremap = true })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
