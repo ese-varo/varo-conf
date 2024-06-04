@@ -209,6 +209,9 @@ vim.keymap.set('i', '<C-k>', '<Esc>:m .-2<CR>==gi', { noremap = true })
 vim.keymap.set('v', '<C-j>', ":m '>+1<CR>gv=gv", { noremap = true })
 vim.keymap.set('v', '<C-k>', ":m '<-2<CR>gv=gv", { noremap = true })
 
+-- open a file in a nuew tab
+vim.keymap.set('n', 'tt', ':tab split<CR>', { noremap = true, silent = true })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -251,6 +254,7 @@ require('lazy').setup({
   'chun-yang/auto-pairs', -- insert or delete brackets, parens, quotes in pair
   'tpope/vim-surround', --quoting/parentehesizing made simple
   'nvim-tree/nvim-web-devicons',
+  'troydm/zoomwintab.vim', -- zoom into a window
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
