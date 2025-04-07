@@ -83,27 +83,12 @@ if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
 
-#set vim to disable ctrl-s
-alias vim="stty -ixon && vim"
-
-# switch to the Nvidia GPU
-alias use-nvidia="optimus-manager --switch nvidia"
-# switch to the integrated GPU and power the Nvidia GPU off
-alias use-integrated="optimus-manager --switch integrated"
-# switch to the iGPU but leave the Nvidia GPU available for on-demand offloading,
-# similar to how Optimus works on Windows
-alias use-hybrid="optimus-manager --switch hybrid"
-
-#rails 
+#rails
 alias r=rails
 alias br=bin/rails
 
 # TERM color
 alias tmux="TERM=screen-256color-bce tmux"
-
-# trackpoint enable and disable
-# alias enable-tp="xinput set-prop 'TPPS/2 IBM TrackPoint' 'Device Enabled' 1"
-# alias disable-tp="xinput set-prop 'TPPS/2 IBM TrackPoint' 'Device Enabled' 0"
 
 #list
 #alias ls='ls --color=auto'
@@ -197,19 +182,10 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 #export PATH="$HOME/.cargo/env:$PATH"
 # source $HOME/.cargo/env
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# export yarn
-export PATH=$PATH:/home/varo/.yarn/bin/
-
-# Add Homebrew's executable directory to the front of the PATH
-export PATH=/usr/local/bin:$PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 if type rg &> /dev/null; then
