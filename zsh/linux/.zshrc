@@ -27,7 +27,6 @@ ZSH_THEME="kennethreitz"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   archlinux
-  asdf
   git
   bundler
   rake
@@ -40,6 +39,10 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# Load asdf completions properly
+. "$HOME/.asdf/asdf.sh"
+fpath=(${ASDF_DIR}/completions $fpath)
 
 # User configuration
 # To retrieve the history file every time history is called upon
