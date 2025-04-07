@@ -160,6 +160,19 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Indenting settings
+-- Use spaces instead of tabs
+vim.opt.expandtab = true
+
+-- Set the number of spaces that a <Tab> in the file counts for
+vim.opt.tabstop = 2
+
+-- Set the number of spaces to use for each step of (auto)indent
+vim.opt.shiftwidth = 2
+
+-- Set the number of spaces a <Tab> key press inserts or a <BS> key removes
+vim.opt.softtabstop = 2
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -895,9 +908,9 @@ require('lazy').setup({
         -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
         --  If you are experiencing weird indenting issues, add the language to
         --  the list of additional_vim_regex_highlighting and disabled languages for indent.
-        additional_vim_regex_highlighting = { 'ruby' },
+        additional_vim_regex_highlighting = { 'ruby', 'javascript' },
       },
-      indent = { enable = true, disable = { 'ruby' } },
+      indent = { enable = true, disable = { 'ruby', 'javascript' } },
     },
     config = function(_, opts)
       -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
