@@ -1,12 +1,20 @@
 [alias]
+  a  = add
+  cm = commit -m
+  s  = status
+  p  = push
 	co = checkout
+  fp = fetch --prune --all
+  l  = log --online --decorate --graph
 	br = branch
-	ci = commit
-	st = status
 [core]
 	editor = nvim
+[github]
+  user = ese-varo
 [user]
 	email = varoboss.ap@gmail.com
 	name = Alvaro Padilla
 [init]
 	defaultBranch = main
+[push]
+  autoSetupRemote = true
