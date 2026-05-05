@@ -126,3 +126,6 @@ export NVM_DIR="$HOME/.nvm"
 
 eval "$(mise activate zsh)"
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+export OLLAMA_CONTEXT_LENGTH=32768
+export OLLAMA_API_BASE=http://localhost:11434
+export PATH="$HOME/.local/bin:$PATH"
